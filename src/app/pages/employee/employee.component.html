@@ -28,43 +28,24 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
-                <td>John</td>
-                <td>Carter</td>
-                <td>johncarter@mail.com</td>
-                <td>785422134V</td>
-                <td>071275577</td>
+              <tr *ngFor="let data of datas">
+                <td>{{ data.first_name }}</td>
+                <td>{{ data.last_name }}</td>
+                <td>{{ data.email }}</td>
+                <td>{{ data.nic }}</td>
+                <td>{{ data.first_name }}</td>
                 <td>
-                  <a class="info p-0" data-original-title="" title="">
-                    <i class="ft-user font-medium-3 mr-2"></i>
-                  </a>
+<!--                  <a class="info p-0" data-original-title="" title="">-->
+<!--                    <i class="ft-user font-medium-3 mr-2"></i>-->
+<!--                  </a>-->
                   <a class="success p-0" data-original-title="" title="">
                     <i class="ft-edit-2 font-medium-3 mr-2"></i>
                   </a>
-                  <a class="danger p-0" data-original-title="" title="">
+                  <a class="danger p-0" data-original-title="" (click)="deleteEmployee(data.id)" title="">
                     <i class="ft-x font-medium-3 mr-2"></i>
                   </a>
                 </td>
               </tr>
-              <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>johndoe@mail.com</td>
-                <td>856488522V</td>
-                <td>077784521</td>
-                <td>
-                  <a class="info p-0" data-original-title="" title="">
-                    <i class="ft-user font-medium-3 mr-2"></i>
-                  </a>
-                  <a class="success p-0" data-original-title="" title="">
-                    <i class="ft-edit-2 font-medium-3 mr-2"></i>
-                  </a>
-                  <a class="danger p-0" data-original-title="" title="">
-                    <i class="ft-x font-medium-3 mr-2"></i>
-                  </a>
-                </td>
-              </tr>
-
               </tbody>
             </table>
           </div>
