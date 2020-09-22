@@ -12,8 +12,8 @@ export const Full_ROUTES: Routes = [
     loadChildren: () => import('../../pages/employee/employee.module').then(m => m.EmployeeModule)
   },
   {
-    path: 'charts',
-    loadChildren: () => import('../../charts/charts.module').then(m => m.ChartsNg2Module)
+    path: 'delivery',
+    loadChildren: () => import('../../pages/delivery/delivery.module').then(m => m.DeliveryModule)
   },
    {
     path: 'forms',
