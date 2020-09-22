@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 
-//Route for content layout with sidebar, navbar and footer.
+// Route for content layout with sidebar, navbar and footer.
 
 export const Full_ROUTES: Routes = [
   {
@@ -8,8 +8,8 @@ export const Full_ROUTES: Routes = [
     loadChildren: () => import('../../dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
-    path: 'calendar',
-    loadChildren: () => import('../../calendar/calendar.module').then(m => m.CalendarsModule)
+    path: 'employee',
+    loadChildren: () => import('../../pages/employee/employee.module').then(m => m.EmployeeModule)
   },
   {
     path: 'charts',

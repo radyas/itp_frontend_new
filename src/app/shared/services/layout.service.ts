@@ -13,7 +13,7 @@ export class LayoutService {
     }
 
 
-    //Customizer
+    // Customizer
 
     private emitCustomizerSource = new Subject<any>();
     customizerChangeEmitted$ = this.emitCustomizerSource.asObservable();
