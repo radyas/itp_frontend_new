@@ -14,34 +14,64 @@
         </div>
         <div class="card-content">
           <div class="px-3">
-            <form class="form">
+            <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit(employeeForm.value)">
               <div class="form-body">
                 <h4 class="form-section"><i class="ft-user"></i> Personal Info</h4>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="projectinput1">First Name</label>
-                      <input type="text" id="projectinput1" class="form-control" name="fname">
+                      <input type="text" id="projectinput1" class="form-control" formControlName="first_name">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="projectinput2">Last Name</label>
-                      <input type="text" id="projectinput2" class="form-control" name="lname">
+                      <input type="text" id="projectinput2" class="form-control" formControlName="last_name">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
+                      <label for="dob">Date of Birth</label>
+                      <input type="date" id="dob" class="form-control" formControlName="dob">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="address">Address</label>
+                      <input type="text" id="address" class="form-control" formControlName="address">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
                       <label for="projectinput3">E-mail</label>
-                      <input type="text" id="projectinput3" class="form-control" name="email">
+                      <input type="text" id="projectinput3" class="form-control" formControlName="email">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="projectinput4">Contact Number</label>
-                      <input type="number" id="projectinput4" class="form-control" name="phone">
+                      <input type="number" id="projectinput4" class="form-control" formControlName="phone">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" id="password" class="form-control" formControlName="password">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="confirm">Confirm Password</label>
+                      <input type="password" id="confirm" class="form-control" formControlName="confirm">
                     </div>
                   </div>
                 </div>
@@ -53,7 +83,7 @@
                     <div class="form-group">
                       <label for="department">Department</label>
                       <select id="department" name="department" class="form-control">
-                        <option value="none" selected="" disabled="">Interested in</option>
+                        <option value="" selected="" disabled="">Department</option>
                         <option value="design">design</option>
                         <option value="development">development</option>
                         <option value="illustration">illustration</option>
@@ -71,7 +101,8 @@
                 <button type="button" class="btn btn-raised btn-raised btn-warning mr-1">
                   <i class="ft-x"></i> Cancel
                 </button>
-                <button type="button" class="btn btn-raised btn-raised btn-primary">
+<!--                <button type="submit" [disabled]="!employeeForm.valid" class="btn btn-raised btn-raised btn-primary">-->
+                <button type="submit" class="btn btn-raised btn-raised btn-primary">
                   <i class="fa fa-check-square-o"></i> Save
                 </button>
               </div>
